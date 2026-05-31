@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wonders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="./images/logo-min.svg" sizes="64x64" type="image/svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="facts.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="apps.css">
+  <link rel="stylesheet" href="faq.css">
+  <link rel="stylesheet" href="contacts.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+  <div class="site-layout">
+    <div class="site-layout__main">
+
+      <!-- Секция 1 - Header -->
+
+
+      <header id="site-header" class="section site-header">
+        <div class="container site-header__container">
+          <div class="header-logo"></div>
+          <nav class="header-nav">
+            <ul class="header-nav">
+              <li><a href="#apps" class="header-nav__link">Mobile App</a></li>
+              <li><a href="#faq" class="header-nav__link">FAQs</a></li>
+              <li>
+                <a href="#contacts" class="header-nav__link">Contact</a>
+              </li>
+              <li>
+                <a href="#hero" class="header-nav__link header-nav__link--bold">Sign Up</a>
+              </li>
+            </ul>
+          </nav>
+          <div id="header-burger" class="header-burger-menu"></div>
+        </div>
+      </header>
+      <div class="site-layout__content">
+
+        <!-- Секция 2 - Hero -->
+
+        <section id="hero" class="section hero-section">
+          <div class="container hero-section__container">
+            <div class="hero-main">
+              <div class="hero-info">
+                <h1 class="section-title hero-title">Skip the Climbing, Catch the Bus</h1>
+                <div class="hero-desc">
+                  We sell tickets to the best seats in the house – houses on wheels, that is!
+                  Get ready for jaw-dropping views without breaking a sweat.
+                </div>
+              </div>
+              <div class="hero-interactive">
+                <div class="hero-trip-options">
+                  <div class="hero-trip-options__item hero-trip-options__item--round-trip">
+                    <input type="button" id="hero-round-trip-btn" data-value="Round trip"
+                      class="button hero-trip-options__bullet hero-trip-options__bullet--active"></input>
+                    <label for="hero-round-trip-btn" class="hero-trip-options__label">Round trip</label>
+                  </div>
+                  <div class="hero-trip-options__item hero-trip-options__item--one-way">
+                    <input type="button" id="hero-one-way-btn" data-value="One Way"
+                      class="button hero-trip-options__bullet"></input>
+                    <label for="hero-one-way-btn" class="hero-trip-options__label">One Way</label>
+                  </div>
+                  <div class="hero-trip-options__item hero-trip-options__item--number-of-travelers">
+                    <button id="hero-decrease-btn" type="button" class="button hero-trip-options__decrease"></button>
+                    <input id="hero-travelers-input" class="hero-trip-options__travelers-amount" type="text" value="1">
+                    <button id="hero-increase-btn" type="button" class="button hero-trip-options__increase"></button>
+                  </div>
+                </div>
+                <div class="hero-signup-form">
+                  <div class="hero-signup-form__group">
+                    <label for="departure-station-input" class="hero-signup-form__label">Departure</label>
+                    <input id="departure-station-input" class="hero-signup-form__input" type="text"
+                      placeholder="Your City/Station" autocomplete="off">
+                    <div id="departure-station-list" class="autocomplete-station-list"></div>
+                  </div>
+                  <div class="hero-signup-form__group">
+                    <label for="arrival-station-input" class="hero-signup-form__label">Arrival</label>
+                    <input id="arrival-station-input" class="hero-signup-form__input" type="text"
+                      placeholder="Where to?" autocomplete="off">
+                    <div id="arrival-station-list" class="autocomplete-station-list"></div>
+                  </div>
+                  <div class="hero-signup-form__group">
+                    <label class="hero-signup-form__label">Pick your lucky day</label>
+                    <div class="hero-signup-form__date-inputs-wrapper">
+                      <input id="departure-date-input"
+                        class="hero-signup-form__input hero-signup-form__input--date hero-signup-form__input--date-depart"
+                        type="date">
+                      <input id="return-date-input"
+                        class="hero-signup-form__input hero-signup-form__input--date hero-signup-form__input--date-return"
+                        type="date">
+                    </div>
+                  </div>
+                  <div class="hero-signup-form__c2a">
+                    <button id="signup-btn" class="button button--c2a button--disabled">Find My Alpine Ride</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-illustration">
+              <img class="hero-illustration__img" src="./images/Hero.png" alt="Illustration of wonders" loading="lazy">
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 3 - interesting fact -->
+
+        <section class="section fact-section">
+          <div class="container fact-section__container">
+            <div class="facts">
+              <div class="facts__item">
+                <div class="facts__label">1.4M+</div>
+                <div class="facts__desc">Daily trains</div>
+              </div>
+              <div class="facts__item">
+                <div class="facts__label">68k+</div>
+                <div class="facts__desc">Photos Taken</div>
+              </div>
+              <div class="facts__item">
+                <div class="facts__label">165+</div>
+                <div class="facts__desc">Years of history</div>
+              </div>
+              <div class="facts__item">
+                <div class="facts__label">23M+</div>
+                <div class="facts__desc">Altitude Gained</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 4 - Find Your Dream -->
+
+        <section class="section gallery-section">
+          <div class="container gallery-section__container">
+            <div class="section-title gallery-title">Glimpses of Glory</div>
+            <div class="gallery-content">
+              <div class="gallery-content__left">
+                <div class="gallery-content__item gallery-content__item--first"></div>
+                <div class="gallery-content__item gallery-content__item--second"></div>
+              </div>
+              <div class="gallery-content__right">
+                <div class="gallery-content__item gallery-content__item--third"></div>
+                <div class="gallery-content__item gallery-content__item--fourth"></div>
+                <div class="gallery-content__item gallery-content__item--fifth"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 5 - Apps -->
+
+        <section id="apps" class="section app-download-section">
+          <div class="container app-download-section__container">
+            <div class="section-title app-download-title">Free downloads app now!</div>
+            <div class="app-list">
+              <div class="app-list__item">
+                <a href="https://play.google.com/" class="app-list__link" target="_blank">
+                  <img class="app-list__image app-list__image--mobile" src="app_imgs/google-play-mobile.png"
+                    alt="Download on Huawei AppGallery" loading="lazy">
+                  <img class="app-list__image app-list__image--desktop" src="app_imgs/google-play.png"
+                    alt="Download on Huawei AppGallery" loading="lazy">
+                </a>
+              </div>
+              <div class="app-list__item">
+                <a href="https://consumer.huawei.com/" class="app-list__link" target="_blank">
+                  <img class="app-list__image app-list__image--mobile" src="app_imgs/huawei-app-gallery-mobile.png"
+                    alt="Download on Huawei AppGallery" loading="lazy">
+                  <img class="app-list__image app-list__image--desktop" src="app_imgs/huawei-app-gallery.png"
+                    alt="Download on Huawei AppGallery" loading="lazy">
+                </a>
+              </div>
+              <div class="app-list__item">
+                <a href="https://www.apple.com/app-store/" class="app-list__link" target="_blank">
+                  <img class="app-list__image app-list__image--mobile" src="app_imgs/app-store-mobile.png"
+                    alt="Download on the App Store" loading="lazy">
+                  <img class="app-list__image app-list__image--desktop" src="app_imgs/app-store.png"
+                    alt="Download on the App Store" loading="lazy">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция 6 - FAQs -->
+
+        <section id="faq" class="section faq-section">
+          <div class="container faq-section__container">
+            <div class="section-title faq-title">FAQs.</div>
+            <div class="faq-list">
+              <div class="faq-item">
+                <div class="faq-item__head">Alpine Bus Journeys?</div>
+                <div class="faq-item__content">
+                  Forget crowded cities! Alpine Bus Journeys are your comfy seat with panoramic windows
+                  to breathtaking mountain vistas, charming villages, and air so fresh it might
+                  make you yodel (please don't, unless you're outside). It's transportation
+                  with a side of unparalleled scenery (and maybe a hairpin turn).
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-item__head">What about seating options?</div>
+                <div class="faq-item__content">
+                  Generally, you'll find comfy standard seats (great views, great value,
+                  maybe great new friends) and perhaps slightly better seats with extra legroom.
+                  All offer a front-row seat to the greatest show on Earth – the Alps!
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-item__head">What is the Alpine Wallet?</div>
+                <div class="faq-item__content">
+                  It's your digital stash of cash that makes booking bus tickets smoother
+                  than a perfectly paved mountain road. Load it up and watch your
+                  travel dreams become reality faster than a bus goes downhill.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-item__head">My Altitude Score?</div>
+                <div class="faq-item__content">
+                  Your loyalty points for cruising the mountain roads! Higher scores might get you
+                  priority boarding (less elbowing for the best window seat!) or maybe just
+                  bragging rights among fellow peak-passengers who prefer four wheels.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-item__head">Why a Bus Station Fee?</div>
+                <div class="faq-item__content">
+                  A small contribution to ensure the station is clean, has reasonably fresh mountain air
+                  (filtered from bus fumes), and enough signs pointing you towards your bus,
+                  not away from it. Sometimes covers the cost of moving rogue bicycles.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-item__head">Why are buses late?</div>
+                <div class="faq-item__content">
+                  Sometimes it's the weather (snow happens!), sometimes a sudden flock
+                  of particularly slow-moving sheep on the road, and sometimes the driver just had
+                  to stop for a photo of that view. Or maybe they got stuck behind a tractor.
+                  Welcome to "Mountain Road Time"!
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-item__head">Peak Season Surcharge?</div>
+                <div class="faq-item__content">
+                  It's the little extra you pay to enjoy the authentic experience of sharing
+                  breathtaking views with a lot of your closest friends (who you haven't met yet)
+                  while strategically placing your bag in the overhead compartment.
+                  Guarantees a vibrant, energetic journey!
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <footer class="section site-footer">
+        <div id="contacts" class="contacts">
+          <div class="contacts-title">Contact us</div>
+          <div class="contacts-info">
+            <div class="contacts-digital">
+              <div class="contacts-digital__telephone">+41 98765 43210</div>
+              <div class="contacts-digital__email">hello@peakpasses.eu</div>
+            </div>
+            <div class="contacts-address">
+              Alpenblick Strasse 7,<br />
+              12345 Edelweiss Town, Alps
+            </div>
+          </div>
+        </div>
+        <div class="container site-footer__container">
+          <div class="footer-logo"></div>
+          <div class="footer-nav">
+            <div class="footer-nav__container">
+              <div class="footer-nav-title">About</div>
+              <ul class="footer-nav-list">
+                <li class="footer-nav-list__item"><a href="#">How it works</a></li>
+                <li class="footer-nav-list__item"><a href="#">Featured</a></li>
+                <li class="footer-nav-list__item"><a href="#">Partnership</a></li>
+                <li class="footer-nav-list__item"><a href="#">Bussiness Relation</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav__container">
+              <div class="footer-nav-title">Community</div>
+              <ul class="footer-nav-list">
+                <li class="footer-nav-list__item"><a href="#">Events</a></li>
+                <li class="footer-nav-list__item"><a href="#">Blog</a></li>
+                <li class="footer-nav-list__item"><a href="#">Podcast</a></li>
+                <li class="footer-nav-list__item"><a href="#">Invite a friend</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav__container">
+              <div class="footer-nav-title">Socials</div>
+              <ul class="footer-nav-list">
+                <li class="footer-nav-list__item"><a href="#">Discord</a></li>
+                <li class="footer-nav-list__item"><a href="#">Instagram</a></li>
+                <li class="footer-nav-list__item"><a href="#">X (Twitter)</a></li>
+                <li class="footer-nav-list__item"><a href="#">Facebook</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="site-footer-copyright" class="footer-copyright"></div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

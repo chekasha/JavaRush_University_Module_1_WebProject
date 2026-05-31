@@ -1,0 +1,132 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-width: 360px;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #202020;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+
+.section {
+    overflow: hidden;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    @media (min-width: 360px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media (min-width: 375px) {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    @media (min-width: 768px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @media (min-width: 1000px) {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 360px) {
+        max-width: 360px;
+    }
+
+    @media (min-width: 375px) {
+        max-width: 375px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 704px;
+    }
+
+    @media (min-width: 1000px) {
+        max-width: 1024px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1248px;
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 1312px;
+    }
+}
+
+.section-title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (min-width: 768px) {
+        font-size: 64px;
+    }
+}
+.button {
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.button--c2a {
+    width: 100%;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--site-text-color-light);
+    border-radius: 10px;
+    background: #0578ff;
+}
+
+.button--disabled {
+    pointer-events: none;
+    user-select: none;
+    background: #BAD1F1;
+}

@@ -1,0 +1,98 @@
+.faq-section {
+    padding-top: 64px;
+    padding-bottom: 161px;
+
+    @media (min-width: 768px) {
+        padding-top: 128px;
+        padding-bottom: 249px;
+    }
+}
+
+.faq-section__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: 768px) {
+        gap: 40px;
+    }
+
+    @media (min-width: 1000px) {
+        max-width: 1086px;
+    }
+}
+
+.faq-title {
+    font-size: 64px;
+}
+
+/*.faq-list {}*/
+
+.faq-item {
+    position: relative;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--site-text-color-dark);
+    }
+}
+
+.faq-item__head {
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 2px;
+        top: 17px;
+        width: 20px;
+        height: 20px;
+        transform: scale(1.2);
+        color: var(--site-text-color-dark);
+        border-radius: 50%;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.21859 9.2181H5.22354C4.79185 9.2181 4.44189 9.56805 4.44189 9.99974C4.44189 10.4314 4.79185 10.7814 5.22354 10.7814H9.21859V14.7764C9.21859 15.2081 9.56854 15.5581 10.0002 15.5581C10.4319 15.5581 10.7819 15.2081 10.7819 14.7764V10.7814H14.7769C15.2086 10.7814 15.5586 10.4314 15.5586 9.99974C15.5586 9.56805 15.2086 9.2181 14.7769 9.2181H10.7819V5.22305C10.7819 4.79136 10.4319 4.44141 10.0002 4.44141C9.56854 4.44141 9.21859 4.79136 9.21859 5.22305V9.2181Z'/%3E%3C/svg%3E%0A");
+        mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.21859 9.2181H5.22354C4.79185 9.2181 4.44189 9.56805 4.44189 9.99974C4.44189 10.4314 4.79185 10.7814 5.22354 10.7814H9.21859V14.7764C9.21859 15.2081 9.56854 15.5581 10.0002 15.5581C10.4319 15.5581 10.7819 15.2081 10.7819 14.7764V10.7814H14.7769C15.2086 10.7814 15.5586 10.4314 15.5586 9.99974C15.5586 9.56805 15.2086 9.2181 14.7769 9.2181H10.7819V5.22305C10.7819 4.79136 10.4319 4.44141 10.0002 4.44141C9.56854 4.44141 9.21859 4.79136 9.21859 5.22305V9.2181Z'/%3E%3C/svg%3E%0A");
+        background-color: currentColor;
+    }
+}
+
+.faq-item__content {
+    pointer-events: none;
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    opacity: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.4;
+    word-break: break-word;
+    transform: translateY(-65px);
+    will-change: opacity;
+}
+
+.faq-item--open {
+    .faq-item__head {
+        &::before {
+            transform: scale(1.2) rotate(45deg);
+            transition: transform .27s;
+            transition-timing-function: ease;
+        }
+    }
+
+    .faq-item__content {
+        pointer-events: auto;
+        position: relative;
+        opacity: 1;
+        height: auto;
+        transform: translateY(0);
+        transition: transform .27s, opacity .23s .04s;
+        transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    }
+}

@@ -1,0 +1,137 @@
+.app-download-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: #ffc501;
+
+    @media (min-width: 768px) {
+        padding-top: 128px;
+        padding-bottom: 128px;
+    }
+
+    @media (min-width: 1000px) {
+        padding-top: 116px;
+    }
+}
+
+.app-download-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    @media (min-width: 768px) {
+        gap: 32px;
+    }
+
+    @media (min-width: 1000px) {
+        gap: 56px;
+    }
+
+    @media (min-width: 1200px) {
+        gap: 60px;
+    }
+}
+
+.app-download-title {
+    max-width: 320px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        max-width: none;
+        font-size: 40px;
+    }
+
+    @media (min-width: 1000px) {
+        font-size: 58px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 62px;
+    }
+}
+
+.app-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+
+    @media (min-width: 1000px) {
+        grid-template-rows: 1fr;
+        gap: 30px;
+        width: 100%;
+        max-width: 863px;
+    }
+}
+
+/*.app-list__item {}*/
+
+.app-list__item:first-child {
+    @media (min-width: 768px) {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    @media (min-width: 1000px) {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        place-self: start;
+    }
+}
+
+.app-list__item:nth-child(2) {
+    @media (min-width: 768px) {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+
+    @media (min-width: 1000px) {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+}
+
+.app-list__item:nth-child(3) {
+    @media (min-width: 768px) {
+        grid-column: 3 / 4;
+        grid-row: 2;
+    }
+
+    @media (min-width: 1000px) {
+        grid-column: 3 / 4;
+        grid-row: 1;
+        place-self: end;
+    }
+}
+
+.app-list__link {
+    cursor: pointer;
+    display: block;
+}
+
+.app-list__image {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.app-list__image--mobile {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.app-list__image--desktop {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: inline-block;
+    }
+}
