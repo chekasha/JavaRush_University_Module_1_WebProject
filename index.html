@@ -18,6 +18,7 @@
   <link rel="icon" href="./images/logo-min.svg" sizes="64x64" type="image/svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="modal-menu.css">
   <link rel="stylesheet" href="hero.css">
   <link rel="stylesheet" href="facts.css">
   <link rel="stylesheet" href="gallery.css">
@@ -27,32 +28,36 @@
   <link rel="stylesheet" href="footer.css">
 </head>
 
-<body>
+<body id="bodyEl">
   <div class="site-layout">
     <div class="site-layout__main">
 
       <!-- Секция 1 - Header -->
 
 
-      <header id="site-header" class="section site-header">
-        <div class="container site-header__container">
-          <div class="header-logo"></div>
-          <nav class="header-nav">
-            <ul class="header-nav">
-              <li><a href="#apps" class="header-nav__link">Mobile App</a></li>
-              <li><a href="#faq" class="header-nav__link">FAQs</a></li>
-              <li>
-                <a href="#contacts" class="header-nav__link">Contact</a>
-              </li>
-              <li>
-                <a href="#hero" class="header-nav__link header-nav__link--bold">Sign Up</a>
-              </li>
-            </ul>
-          </nav>
-          <div id="header-burger" class="header-burger-menu"></div>
+      <div id="modal-menu" class="modal-menu">
+            <div class="container modal-menu__container">
+                <div id="modal-close" class="modal-menu__close"></div>
+                <div class="modal-menu-list">
+                    <a href="#apps" class="modal-menu-list__link">Mobile App</a>
+                    <a href="#faq" class="modal-menu-list__link">FAQs</a>
+                    <a href="#contacts" class="modal-menu-list__link">Contact</a>
+                    <a href="#hero" class="modal-menu-list__link">Sign Up</a>
+                </div>
+            </div>
         </div>
-      </header>
-      <div class="site-layout__content">
+        <header id="site-header" class="section site-header">
+            <div class="container site-header__container">
+                <div class="header-logo"></div>
+                <nav class="header-nav">
+                    <a href="#apps" class="header-nav__link">Mobile App</a>
+                    <a href="#faq" class="header-nav__link">FAQs</a>
+                    <a href="#contacts" class="header-nav__link">Contact</a>
+                    <a href="#hero" class="header-nav__link header-nav__link--bold">Sign Up</a>
+                </nav>
+                <div id="header-burger" class="header-burger-menu"></div>
+            </div>
+        </header>
 
         <!-- Секция 2 - Hero -->
 
